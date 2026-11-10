@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Una sorpresa para ti 💗</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+font-family:Georgia,serif;background:linear-gradient(135deg,#ffd9e8,#fff4f8);overflow:hidden}
+.wrap{text-align:center;padding:24px}.hint{color:#7d5262;margin-bottom:16px}
+.envelope{position:relative;width:310px;height:210px;margin:auto;cursor:pointer;filter:drop-shadow(0 12px 18px #0002)}
+.env{position:absolute;inset:0;background:#f6b6ca;border-radius:10px}
+.flap{position:absolute;left:0;top:0;width:0;height:0;border-left:155px solid transparent;border-right:155px solid transparent;border-top:125px solid #e98eaa;transform-origin:top;transition:.8s;z-index:4}
+.pocket{position:absolute;left:0;bottom:0;width:0;height:0;border-left:155px solid transparent;border-right:155px solid transparent;border-bottom:120px solid #ef9eb7;z-index:3}
+.heart{position:absolute;z-index:5;left:132px;top:83px;font-size:44px;color:#fff;transition:.8s}
+.letter{position:absolute;width:290px;left:10px;bottom:8px;height:180px;background:#fffdf8;padding:20px 18px;text-align:left;
+border-radius:8px;box-shadow:0 5px 20px #0002;z-index:2;transition:1s;overflow:auto;color:#333}
+.letter h2{text-align:center;color:#d94e79;margin:0 0 10px;font-size:22px}
+.letter p{margin:7px 0;line-height:1.45;font-size:15px}
+.letter .pink{color:#e45a81;font-weight:bold}
+.open .flap{transform:rotateX(180deg);z-index:1}
+.open .letter{transform:translateY(-205px);height:285px;z-index:6}
+.open .heart{opacity:0;transform:scale(.5)}
+.btn{margin-top:240px;border:0;background:#d94e79;color:#fff;padding:11px 20px;border-radius:999px;font-size:15px;display:none}
+.open .btn{display:inline-block}
+.small{font-size:12px;color:#9a6a78;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hint">💌 Toca el sobre para abrir tu sorpresa</div>
+<div class="envelope" id="env">
+<div class="env"></div>
+<div class="letter">
+<h2>Para ti 💗</h2>
+<p><span class="pink">Te miro</span> y me doy cuenta que jamás podré amar a nadie más con tanta intensidad, encontré el <span class="pink">amor</span> y la <span class="pink">calma</span> que tanto necesitaba.</p>
+<p><span class="pink">Me gusta</span> la forma en la que me tratas, me gusta tu forma de hablarme, <span class="pink">me gusta cómo me alegras el día</span>, me gusta cómo sin verte te siento, <span class="pink">me gusta pensar en ti</span>, me gusta tu físico, me gusta tu interior.</p>
+<p>Tengo seguridad en algo y es que <span class="pink">te amo. &lt;3</span></p>
+</div>
+<div class="flap"></div><div class="pocket"></div><div class="heart">♥</div>
+</div>
+<div class="small">Hecho con mucho cariño ♡</div>
+</div>
+<script>
+document.getElementById('env').addEventListener('click',()=>document.getElementById('env').classList.add('open'));
+</script>
+</body>
+</html>
